@@ -1,0 +1,185 @@
+cat > .gitignore << 'EOF'
+# ============================================================================
+# Build artifacts
+# ============================================================================
+build/
+build-*/
+cmake-build-*/
+out/
+[Bb]uild/
+.build/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+*.cmake
+!cmake/*.cmake  # Keep our cmake modules
+CMakeUserPresets.json
+
+# ============================================================================
+# Conan Package Manager
+# ============================================================================
+# Conan v1
+conan.lock
+conanbuildinfo.*
+conaninfo.txt
+graph_info.json
+.conan/
+
+# Conan v2
+conan_cache/
+CMakeUserPresets.json
+*conan*.cmake
+generators/
+conanrunenv*.sh
+conanrunenv*.bat
+deactivate_conanrunenv*.sh
+
+# ============================================================================
+# C++ Compiled Objects
+# ============================================================================
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+
+# Precompiled headers
+*.gch
+*.pch
+*.pdb
+*.ipch
+
+# ============================================================================
+# IDE and Editors
+# ============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# CLion/IntelliJ
+.idea/
+cmake-build-*/
+*.iml
+
+# Vim/Neovim
+*.swp
+*.swo
+*~
+.vim/
+Session.vim
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+TAGS
+
+# Kate
+*.kate-swp
+.*.kate-swp
+
+# ============================================================================
+# WSL/Arch Linux specific
+# ============================================================================
+.Trash-*
+.directory
+.fuse_hidden*
+.nfs*
+
+# ============================================================================
+# Testing and Coverage
+# ============================================================================
+*.gcda
+*.gcno
+*.gcov
+coverage.info
+coverage/
+htmlcov/
+*.profdata
+*.profraw
+.coverage
+.pytest_cache/
+test-results/
+
+# ============================================================================
+# Documentation
+# ============================================================================
+docs/html/
+docs/latex/
+docs/xml/
+doxygen_sqlite3.db
+*.dox
+
+# ============================================================================
+# Python (for scripts)
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.venv/
+pip-log.txt
+
+# ============================================================================
+# Data and Models
+# ============================================================================
+*.h5
+*.hdf5
+*.pkl
+*.npy
+*.npz
+*.pth
+*.pt
+*.onnx
+*.pb
+models/
+checkpoints/
+# Keep CSV files for examples
+!data/*.csv
+
+# ============================================================================
+# Logs and Temporary files
+# ============================================================================
+*.log
+*.tmp
+*.temp
+logs/
+tmp/
+temp/
+
+# ============================================================================
+# Benchmarks
+# ============================================================================
+benchmark_results/
+*.benchmark
+perf.data*
+callgrind.out.*
+cachegrind.out.*
+massif.out.*
+
+# ============================================================================
+# Security
+# ============================================================================
+.env
+.env.*
+*.key
+*.pem
+secrets/
+EOF

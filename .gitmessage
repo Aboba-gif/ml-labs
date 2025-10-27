@@ -1,0 +1,31 @@
+# <type>(<scope>): <subject> (max 50 chars)
+
+# <body> (optional, wrap at 72 chars)
+
+# <footer> (optional)
+
+# Type: 
+#   feat     - new feature
+#   fix      - bug fix
+#   perf     - performance improvement
+#   refactor - code refactoring
+#   test     - adding tests
+#   docs     - documentation
+#   build    - build system changes
+#   ci       - CI configuration
+#   style    - code style changes
+#   chore    - maintenance tasks
+#
+# Scope: tensor|autodiff|optimizer|lab01|lab02|cmake|conan
+#
+# Example:
+# feat(tensor): add SIMD-optimized matrix multiplication
+#
+# Implemented AVX2 intrinsics for float32 matrix multiplication,
+# achieving 3.5x speedup on Intel processors.
+#
+# Benchmark results:
+# - Naive: 1250ms
+# - SIMD:  357ms
+#
+# Closes #42
